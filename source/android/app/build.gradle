@@ -32,6 +32,7 @@ dependencies {
     compile "com.android.support:palette-v7:${supportLibVersion}"
     compile 'de.hdodenhof:circleimageview:2.0.0'
 
+    compile 'com.google.android.gms:play-services-maps:8.4.0'
 
     compile 'io.reactivex:rxandroid:1.0.1'
 // Because RxAndroid releases are few and far between, it is recommended you also

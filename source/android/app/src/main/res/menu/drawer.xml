@@ -28,6 +28,12 @@
             android:title="@string/groups" />
 
         <item
+            android:id="@+id/shops"
+            android:checked="false"
+            android:icon="@drawable/ic_wheat"
+            android:title="@string/shops" />
+
+        <item
             android:id="@+id/logout"
             android:checked="false"
             android:icon="@drawable/ic_wheat"

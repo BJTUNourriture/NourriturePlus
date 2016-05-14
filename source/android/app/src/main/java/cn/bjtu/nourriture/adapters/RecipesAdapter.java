@@ -215,7 +215,6 @@ public class RecipesAdapter extends RecyclerView.Adapter<RecipesAdapter.ViewHold
         private final RecipesAdapter adapter;
 
         private final List<Recipe> originalList;
-
         private final List<Recipe> filteredList;
 
         private RecipeFilter(RecipesAdapter adapter, List<Recipe> originalList) {

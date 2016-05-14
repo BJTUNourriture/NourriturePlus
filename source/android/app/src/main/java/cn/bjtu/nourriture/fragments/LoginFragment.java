@@ -6,7 +6,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,22 +14,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
 import cn.bjtu.nourriture.R;
 import cn.bjtu.nourriture.UserActivity;
-import cn.bjtu.nourriture.api.ErrorUtils;
-import cn.bjtu.nourriture.api.NourritureService;
-import cn.bjtu.nourriture.api.ServiceFactory;
-import cn.bjtu.nourriture.model.ErrorLogin;
 import cn.bjtu.nourriture.model.Login;
-import cn.bjtu.nourriture.model.Message;
-import cn.bjtu.nourriture.model.Token;
-import retrofit.HttpException;
-import rx.Observable;
-import rx.Subscriber;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.schedulers.Schedulers;
 
 /**
  * Author : juliengenoud
@@ -88,46 +74,62 @@ public class LoginFragment extends Fragment {
                 Login user = new Login(username.getText().toString(),
                         password.getText().toString());
 
-                NourritureService service = ServiceFactory.createRetrofitService(NourritureService.class);
-                Observable<Token> observable = service.loginUser(user);
 
-                observable
-                        .subscribeOn(Schedulers.newThread())
-                        .observeOn(AndroidSchedulers.mainThread())
-                        .subscribe(new Subscriber<Token>() {
-                            @Override
-                            public void onCompleted() {
-                                //Do nothing
-                            }
-
-                            @Override
-                            public void onError(Throwable e) {
-                                /*e.printStackTrace();
-                                Log.e(TAG, e.getMessage());*/
-                                if (e instanceof HttpException) {
-                                    ErrorLogin error = ErrorUtils.parseError(((HttpException) e).response().errorBody(), ServiceFactory.getRestAdapter());
-                                }
-                            }
-
-                            @Override
-                            public void onNext(Token token) {
-
-                                SharedPreferences preferences = getActivity().getSharedPreferences(
-                                        "GLOBAL", Context.MODE_PRIVATE);
-                                SharedPreferences.Editor editor = preferences.edit();
-                                editor.putString(getString(R.string.username_pref),
-                                        token.getUserName());
-                                editor.putString(getString(R.string.token_pref), token.getKey());
-                                editor.putString(getString(R.string.user_id_pref),
-                                        token.getUserId());
-                                editor.commit();
+                SharedPreferences preferences = getActivity().getSharedPreferences(
+                        "GLOBAL", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString(getString(R.string.username_pref),
+                        "Julien");
+                editor.putString(getString(R.string.token_pref), "Julien");
+                editor.putString(getString(R.string.user_id_pref),
+                        "Julien");
+                editor.commit();
 
 
-                                Toast.makeText(getContext(), token.getUserName(), Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(getActivity(), UserActivity.class);
-                                startActivity(intent);
-                            }
-                        });
+                Toast.makeText(getContext(), "Julien", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getActivity(), UserActivity.class);
+                startActivity(intent);
+//
+//                NourritureService service = ServiceFactory.createRetrofitService(NourritureService.class);
+//                Observable<Token> observable = service.loginUser(user);
+//
+//                observable
+//                        .subscribeOn(Schedulers.newThread())
+//                        .observeOn(AndroidSchedulers.mainThread())
+//                        .subscribe(new Subscriber<Token>() {
+//                            @Override
+//                            public void onCompleted() {
+//                                //Do nothing
+//                            }
+//
+//                            @Override
+//                            public void onError(Throwable e) {
+//                                /*e.printStackTrace();
+//                                Log.e(TAG, e.getMessage());*/
+//                                if (e instanceof HttpException) {
+//                                    ErrorLogin error = ErrorUtils.parseError(((HttpException) e).response().errorBody(), ServiceFactory.getRestAdapter());
+//                                }
+//                            }
+//
+//                            @Override
+//                            public void onNext(Token token) {
+//
+//                                SharedPreferences preferences = getActivity().getSharedPreferences(
+//                                        "GLOBAL", Context.MODE_PRIVATE);
+//                                SharedPreferences.Editor editor = preferences.edit();
+//                                editor.putString(getString(R.string.username_pref),
+//                                        token.getUserName());
+//                                editor.putString(getString(R.string.token_pref), token.getKey());
+//                                editor.putString(getString(R.string.user_id_pref),
+//                                        token.getUserId());
+//                                editor.commit();
+//
+//
+//                                Toast.makeText(getContext(), token.getUserName(), Toast.LENGTH_LONG).show();
+//                                Intent intent = new Intent(getActivity(), UserActivity.class);
+//                                startActivity(intent);
+//                            }
+//                        });
             }
         });
 

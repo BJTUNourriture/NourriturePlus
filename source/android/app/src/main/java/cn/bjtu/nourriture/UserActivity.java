@@ -19,6 +19,7 @@ import cn.bjtu.nourriture.fragments.GroupFragment;
 import cn.bjtu.nourriture.fragments.IngredientFragment;
 import cn.bjtu.nourriture.fragments.LogoutFragment;
 import cn.bjtu.nourriture.fragments.RecipeFragment;
+import cn.bjtu.nourriture.fragments.ShopFragment;
 import cn.bjtu.nourriture.fragments.users.UserFragment;
 
 public class UserActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -163,6 +164,14 @@ public class UserActivity extends AppCompatActivity implements NavigationView.On
                 trans4.replace(R.id.frame, GroupFragment.newInstance());
                 trans4.commit();
                 break;
+
+            case R.id.shops:
+                toolbar.setTitle(getString(R.string.shops));
+                android.support.v4.app.FragmentTransaction trans6 = getSupportFragmentManager().beginTransaction();
+                trans6.replace(R.id.frame, ShopFragment.newInstance());
+                trans6.commit();
+                break;
+
             case R.id.logout:
                 toolbar.setTitle(getString(R.string.logout));
                 android.support.v4.app.FragmentTransaction trans5 = getSupportFragmentManager().beginTransaction();

@@ -9,6 +9,8 @@
     <string name="ingredients">INGREDIENTS</string>
     <string name="recipes">RECIPES</string>
     <string name="groups">GROUPS</string>
+    <string name="shops">SHOPS</string>
+
     <string name="openDrawer">openDrawe</string>
     <string name="closeDrawer">closeDrawe</string>
     <string name="category">CATEGORY</string>
