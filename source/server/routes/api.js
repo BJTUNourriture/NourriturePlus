@@ -11,6 +11,7 @@ var recipesController = require('../API/controllers/recipes');
 var allergiesController = require('../API/controllers/allergies');
 var tagsController = require('../API/controllers/tags');
 var uploadsController = require('../API/controllers/uploads');
+var shopsController = require('../API/controllers/shops');
 var jwt = require('jsonwebtoken')
 var passport = require('passport');
 var searchController = require('../API/controllers/search');
@@ -216,6 +217,12 @@ router.route('/tags/name/:name')
 */
 router.route('/upload/recipes/photo/thumbnail')
     .post(uploadsController.postRecipeThumbnailUrl);
+
+/*
+** Endpoints for map marker
+*/
+router.route('/shops')
+    .get(shopsController.getShopsLocation);
 
 /*
  ** Endpoints for Suggestions
