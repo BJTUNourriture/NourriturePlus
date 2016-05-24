@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "/Users/juliengenoud/Workspace/BeamLargeFiles/Application/build/intermediates/res/merged/debug/drawable-hdpi-v4/pizza.png",
+        "source": "/Users/juliengenoud/Workspace/BeamLargeFiles/Application/src/main/res/drawable-hdpi/pizza.png"
+    },
+    {
+        "merged": "/Users/juliengenoud/Workspace/BeamLargeFiles/Application/build/intermediates/res/merged/debug/drawable-hdpi-v4/pechesmelbas.jpg",
+        "source": "/Users/juliengenoud/Workspace/BeamLargeFiles/Application/src/main/res/drawable-hdpi/pechesmelbas.jpg"
+    },
+    {
+        "merged": "/Users/juliengenoud/Workspace/BeamLargeFiles/Application/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher.png",
+        "source": "/Users/juliengenoud/Workspace/BeamLargeFiles/Application/src/main/res/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/juliengenoud/Workspace/BeamLargeFiles/Application/build/intermediates/res/merged/debug/drawable-hdpi-v4/creme.jpeg",
+        "source": "/Users/juliengenoud/Workspace/BeamLargeFiles/Application/src/main/res/drawable-hdpi/creme.jpeg"
+    },
+    {
+        "merged": "/Users/juliengenoud/Workspace/BeamLargeFiles/Application/build/intermediates/res/merged/debug/drawable-hdpi-v4/clafoutis.jpg",
+        "source": "/Users/juliengenoud/Workspace/BeamLargeFiles/Application/src/main/res/drawable-hdpi/clafoutis.jpg"
+    },
+    {
+        "merged": "/Users/juliengenoud/Workspace/BeamLargeFiles/Application/build/intermediates/res/merged/debug/drawable-hdpi-v4/patisson.jpeg",
+        "source": "/Users/juliengenoud/Workspace/BeamLargeFiles/Application/src/main/res/drawable-hdpi/patisson.jpeg"
+    },
+    {
+        "merged": "/Users/juliengenoud/Workspace/BeamLargeFiles/Application/build/intermediates/res/merged/debug/drawable-hdpi-v4/tarte.jpg",
+        "source": "/Users/juliengenoud/Workspace/BeamLargeFiles/Application/src/main/res/drawable-hdpi/tarte.jpg"
+    }
+]
